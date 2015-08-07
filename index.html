@@ -1,39 +1,128 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>ICFP Programming Contest 2015</title>
-  <link rel="stylesheet" href="site.css">
   <link rel="icon" type="image/png" href="logo-32x32.png">
+<title>ICFP Programming Contest 2015</title>
+
+<style>
+html {
+  background-color: #666;
+}
+
+body {
+  max-width: 70em;
+  padding: 5em;
+  background-color: white;
+  box-shadow: 2px 2px 2px 2px black;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media print {
+  body {
+    box-shadow: 0 0 0 0 black;
+    padding: 0em;
+  }
+}
+
+h1 {
+  border-bottom: 1px solid black;
+  text-align: right;
+}
+em {
+  font-weight: bold;
+}
+
+.comment {
+  font-style: italic;
+  color: #999;
+}
+
+.example_unit {
+  box-shadow: inset 1px 1px 1px 1px black;
+  margin: 1em;
+  padding: 1em;
+}
+
+.figure {
+  border: 1px solid black;
+  margin: 1em;
+  box-shadow: 2px 2px 2px 2px #333;
+  padding: 1em;
+}
+
+.caption {
+  padding-top: 1em;
+}
+
+.floating { float: right; }
+
+
+#commands td { padding: 0.5em 1em 0em 1em; }
+#params   td { padding: 0.5em 1em 0em 1em; }
+
+</style>
 </head>
 <body>
-  <div class="container">
-    <div class="logo">AS2H2 Division</div>
-    <div class="content">
-      <h1>BAA Announcement</h1>
-      <div class="date">May 18, 2015</div>
-      <div class="synopsis"><span class="key">Synopsis</span><span class="value">Funding opportunities in computational archaeology and national security.</span></div>
-      <p>The ICFP Programming Contest 2015 is the 18th instance of the annual programming contest series sponsored by The ACM SIGPLAN International Conference on Functional Programming.</p>
-      <p>This year, the contest starts on <a href="http://www.timeanddate.com/countdown/generic?p0=1440&amp;iso=20150807T12&amp;msg=ICFP%20Programming%20Contest%202015">Friday 7 August 2015 at 12:00 UTC</a> and ends on <a href="http://www.timeanddate.com/countdown/generic?p0=1440&amp;iso=20150810T12&amp;msg=ICFP%20Programming%20Contest%202015">Monday 10 August 2015 at 12:00 UTC</a>. There will be a lightning division, ending on <a href="http://www.timeanddate.com/countdown/generic?p0=1440&amp;iso=20150808T12&amp;msg=ICFP%20Programming%20Contest%202015">Saturday 8 August 2015 at 12:00 UTC</a>.</p>
-      <p>The task will be up here on August 7th. Keep up to date via <a href="https://twitter.com/icfpcontest2015">twitter</a>.</p>
-      <p>This is an open contest. Anybody may participate except for the contest organizers and members of the same group as the the contest chairs. No advance registration or entry fee is required. Contestants are free to organize themselves into teams of any size.</p>
-      <p>Any programming language(s) on any platform(s) may be used.</p>
-      <p>There will be cash prizes for the first and second place teams, the team winning the lightning division, and a discretionary judges’ prize. There may also be travel support for the winning teams to attend the conference.</p>
-      <p>In addition, the organizers will declare during the conference that:</p>
-      <ul>
-        <li>the first place team’s language is “the programming language of choice for discriminating hackers”,</li>
-        <li>the second place team’s language is “a fine tool for many applications”,</li>
-        <li>the winning lightning division team’s language is “very suitable for rapid prototyping”, and</li>
-        <li>the team winning the judges’ prize is “an extremely cool bunch of hackers”.</li>
-      </ul>
-      <div class="file">
-        <p><a class="file" href="OGA-BAA-15-18.pdf">OGA-BAA-15-18.pdf</a> (188 Kb)</p>
-        <p><span class="key">Description</span><span class="value">OGA-BAA-15-18 Aleister BAA</span></p>
-      </div>
-      <p style="text-align:center"><a class="twitter-timeline" href="https://twitter.com/ICFPContest2015" data-widget-id="628608266591797248">Tweets by @ICFPContest2015</a>
+
+<img src="icfp_small.png" alt="Turing-like machine">
+<h1>ICFP Programming Contest 2015</h1>
+
+<p>This is the 18th instance of the annual programming contest series
+sponsored by the ACM SIGPLAN International Conference on Functional
+Programming (ICFP).</p>
+
+<p>The contest runs from <a
+href="http://www.timeanddate.com/countdown/generic?p0=1440&amp;iso=
+20150807T12&amp;msg=ICFP%20Programming%20Contest%202015">Friday 7 August
+2015 at 12:00 UTC</a> to <a
+href="http://www.timeanddate.com/countdown/generic?p0=1440&amp;iso=
+20150810T12&amp;msg=ICFP%20Programming%20Contest%202015">Monday 10
+August 2015 at 12:00 UTC</a>. The lightning division ends on <a
+href="http://www.timeanddate.com/countdown/generic?p0=1440&amp;iso=
+20150808T12&amp;msg=ICFP%20Programming%20Contest%202015">Saturday 8
+August 2015 at 12:00 UTC</a>. Winners will be announced on Tuesday, 1
+September 2015, at <a
+href="http://www.icfpconference.org/icfp2015/index.html">ICFP
+2015</a>.</p>
+
+<p>The following contest information is available. Follow <a
+href="http://www.twitter.com/ICFPContest2015">@ICFPContest2015</a> on <a
+href="http://www.twitter.com/">Twitter</a> for contest updates (also
+embedded below). Informational tidbits and any necessary rule
+clarifications will appear on Twitter and be posted below. Email <a
+href="mailto:icfpcontest2015@gmail.com">icfpcontest2015@gmail.com</a>
+(or tweet to <a
+href="http://www.twitter.com/ICFPContest2015">@ICFPContest2015</a>, for
+public disclosure) if you have questions, comments, or exhortations.</p>
+
+<ul>
+<li><a href="original-baa.html">Original BAA Solicitation</a></li>
+<li><a href="story.html">Background: Team Postmortem</a></li>
+<li><a href="spec.html">Problem Specification</a></li>
+<li><a href="problems.html">Qualification Problems</a></li>
+<li><a href="https://davar.icfpcontest.org/">Submission System</a></li>
+<li><a href="https://davar.icfpcontest.org/leader_board.html">Leaderboard</a></li>
+</ul>
+
+<h2>Intellectual Property</h2>
+
+<p>ICFP contest participants retain ownership of all intellectual property
+rights in and to any submitted solutions, custom tools, and related
+materials ("Submissions") that participants had before submission. As a
+condition of entry, participants grant Galois, Inc. a non-exclusive,
+perpetual, irrevocable, worldwide, royalty-free license to use,
+reproduce, publish, distribute, publicly perform and publicly display the
+Submissions for the purposes of allowing Galois, Inc. and other ICFP
+judges to test and evaluate the Submissions for purposes of the contest.</p>
+
+<h2>Tidbits and Clarifications</h2>
+
+<p>None, so far.</p>
+
+      <p><a class="twitter-timeline" href="https://twitter.com/ICFPContest2015" data-widget-id="628608266591797248">Tweets by @ICFPContest2015</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
       </p>
-    </div>
-  </div>
+      
 </body>
 </html>
