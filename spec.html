@@ -357,7 +357,7 @@ may be provided in any order:
 <table id="params" class="figure">
 <tr><th>Flag</th><th>Type</th><th>Description</th></tr>
 <tr><td><code>-f</code></td>
-    <td><code>FILENAME</code></td><td>File containing JSON encoded input.</td>
+    <td><code>FILENAME</code></td><td>File containing JSON encoded input</td>
 </tr>
 <tr><td><code>-t</code></td><td><code>NUMBER</code></td>
     <td>Time limit, in seconds, to produce output</td>
@@ -366,7 +366,7 @@ may be provided in any order:
     <td>Memory limit, in megabytes, to produce output</td>
 </tr>
 <tr><td><code>-p</code></td><td><code>STRING</code></td>
-    <td>Phrase of power, as quoted string</td>
+    <td>Phrase of power</td>
 </tr>
 </table>
 
@@ -388,15 +388,14 @@ killed. If <code>-m</code> is not provided, no memory limit  (other than
 the hard memory limit of the system the judges choose to run it on) is
 imposed on the program.</p>
 
-<p> If provided, the parameter <code>-p</code> is a quoted phrase of
-power (for example, "Ei!" - including the quotation marks - for the
-phrase given <a href="#phrases">above</a>). The parameter
-<code>-p</code> may be provided multiple times, once for each phrase of
-power the program should attempt to invoke in its output. As you
-discover more phrases of power, you can re-run the program with
-additional <code>-p</code> command line options; during judging (except
-for the lightning division), the program will be passed all the phrases
-of power.</p>
+<p> If provided, the parameter <code>-p</code> is a phrase of power (for
+example, <em>Ei!</em> for the phrase given <a
+href="#phrases">above</a>). The parameter <code>-p</code> may be
+provided multiple times, once for each phrase of power the program
+should attempt to invoke in its output. As you discover more phrases of
+power, you can re-run the program with additional <code>-p</code>
+command line options; during judging (except for the lightning
+division), the program will be passed all the phrases of power.</p>
 
 <h2 id="output">Output</h2>
 
@@ -534,7 +533,10 @@ by the judges on another set of problems.</p>
 <p>Before submitting solutions, at least one competitor on a team must
 obtain an API token from the login server (<a
 href="https://davar.icfpcontest.org/">davar.icfpcontest.org</a>). The
-team must also be created on the login server. It is not possible to join an existing team using the login server; instead, <em>one</em> team member should create the team and add the email addresses of all the other team members.</p>
+team must also be created on the login server. It is not possible to join 
+an existing team using the login server; instead, <em>one</em> team member 
+should create the team and add the email addresses of all the other team 
+members.</p>
 
 <p>Solutions are submitted using an HTTP <code>POST</code> to the
 submission server. One way to accomplish this is to invoke
