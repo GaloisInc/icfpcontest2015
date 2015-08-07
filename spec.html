@@ -365,6 +365,9 @@ may be provided in any order:
 <tr><td><code>-m</code></td><td><code>NUMBER</code></td>
     <td>Memory limit, in megabytes, to produce output</td>
 </tr>
+<tr><td><code>-c</code></td><td><code>NUMBER</code></td>
+    <td>Number of processor cores available</td>
+</tr>
 <tr><td><code>-p</code></td><td><code>STRING</code></td>
     <td>Phrase of power</td>
 </tr>
@@ -387,6 +390,9 @@ Programs that try to allocate more than this amount of memory will be
 killed. If <code>-m</code> is not provided, no memory limit  (other than
 the hard memory limit of the system the judges choose to run it on) is
 imposed on the program.</p>
+
+<p> If provided, the parameter <code>-c</code> indicates the number of
+processor cores available to the program.</p>
 
 <p> If provided, the parameter <code>-p</code> is a phrase of power (for
 example, <em>Ei!</em> for the phrase given <a
