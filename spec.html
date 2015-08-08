@@ -233,6 +233,8 @@ move_score = points + line_bonus
                 <b>else</b> 0
 </pre>
 
+<p>The sum of move scores for all locked units is denoted <em>move_scores</em>.</p>
+
 <p>The player also scores points for invoking phrases of
    power.  For each phrase of power <em>p</em>, there
    are two factors that contribute to the number of points scored:</p>
@@ -259,7 +261,7 @@ denoted <em>power_scores</em>.</p>
 
 <p>Consequently, the total number of points earned for a board is:</p>
 <pre>
-  points = move_score + power_scores
+  points = move_scores + power_scores
 </pre>
 
 <p>As previously mentioned, issuing a command that would result in an error 
@@ -516,8 +518,8 @@ code is submitted</em> during the first 24 hours of the contest. Scoring
 in the lightning division includes only move-related points, and phrases
 of power are not considered. That is, scoring for the lightning division
 is exactly as described <a href="#scoring">above</a> except that the
-final formula is <code>points = move_score</code> instead of
-<code>points = move_score + power_scores</code>. Rankings for the
+final formula is <code>points = move_scores</code> instead of
+<code>points = move_scores + power_scores</code>. Rankings for the
 lightning division are determined without the phrases of power
 tiebreaker; in the lightning division, all teams with the same score on
 the same problem receive the same ranking for that problem. In the
