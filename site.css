@@ -31,3 +31,4 @@ a.file::before { content: url(magnifying_glass.gif); }
 span.key::after { content: ": " }
 .date { font-size: 70%; }
 .synopsis { margin: 1ex 0; font-size: 85%; }
+
