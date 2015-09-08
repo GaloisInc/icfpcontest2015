@@ -199,15 +199,17 @@ was run twice, once with a 90 second time limit (<i>90s</i>) and once
 with a 5 minute time limit (<i>5m</i>), and both results were
 counted.</p>
 
-<p>The white leaderboard on the left has the overall standings. The
-black leaderboards on the right contain the individual team rankings for
-each variant of each problem, as well as a graphical comparison of the
-points awarded to all teams' solutions to each variant of each problem.
-Note that not all teams successfully finished both variants of all
-problems within the prescribed time limits. In addition, one finalist
-program generated plain text output rather than properly formatted JSON
-output and was therefore not scored; thus, only 9 finalists appear on
-the leaderboard.</p>
+<p>The white leaderboard on the left has the overall standings. Each
+team's "score" on this leaderboard is calculated as described <a
+href="#calculations">below the leaderboards</a>; higher numbers are
+better.  The black leaderboards on the right contain the individual team
+rankings for each variant of each problem, as well as a graphical
+comparison of the points awarded to all teams' solutions to each variant
+of each problem. Note that not all teams successfully finished both
+variants of all problems within the prescribed time limits. In addition,
+one finalist program generated plain text output rather than properly
+formatted JSON output and was therefore not scored; thus, only 9
+finalists appear on the leaderboard.</p>
 
 <p>You may switch between the leaderboards by clicking on the problem
 names.  You may highlight the entries for a particular team by clicking
@@ -219,5 +221,32 @@ on the team name. </p>
 <tr><td id="left"></td><td id="midL"></td><td id="midR"></td><td id="right"></td></tr>
 </table>
 </div>
+
+
+<p>
+<a name="calculations"></a>
+Scores in the overall team standings are calculated as follows:
+</p>
+
+
+<ul>
+
+<li>For each variant of each problem (called a "run"), every team gets a
+run score. The team with the highest game score on that run gets 100
+points. All other teams get 100<code>x</code><sup>2</sup> points, where
+<code>x</code> is the fraction of the highest game score they achieved.
+For example, if the maximum game score achieved for run Q was 100
+points, and team Z had a game score of 50 points for run Q, then team Z
+would get 25 run points for run Q. A team that does not complete a run
+within the time limit gets a run score of 0 for that run.</li>
+
+<li>The overall score for a team is the average of the team's run
+scores. Thus, the highest possible overall score is 100 (for a team that
+wins every run), and the lowest is 0 (for a team that never finishes a
+run, or gets such low scores that their run score calculations round to
+0).</li>
+
+</ul>
+
 </body>
 </html>
