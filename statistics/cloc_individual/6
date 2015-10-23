@@ -1,0 +1,30 @@
+     100 files     200 files     300 files     400 files     500 files     600 files     700 files     800 files     900 files    1000 files    1100 files    1200 files    1300 files    1400 files    1500 files    1600 files    1700 files    1800 files    1900 files    2000 files    2100 files    2200 files    2300 files    2400 files    2500 files    2600 files    2652 text files.
+classified 2646 filesDuplicate file check 2646 files (1647 known unique)Unique:      100 files                                          Unique:      200 files                                          Unique:      300 files                                          Unique:      400 files                                          Unique:      500 files                                          Unique:      600 files                                          Unique:      700 files                                          Unique:      800 files                                          Unique:      900 files                                          Unique:     1000 files                                          Unique:     1100 files                                          Unique:     1200 files                                          Unique:     1300 files                                          Unique:     1400 files                                          Unique:     1500 files                                          Unique:     1600 files                                              2184 unique files.                              
+Counting:  100Counting:  200Counting:  300Counting:  400Counting:  500Counting:  600Counting:  700Counting:  800Counting:  900Counting:  1000Counting:  1100Counting:  1200Counting:  1300Counting:  1400Counting:  1500Counting:  1600Counting:  1700Counting:  1800Counting:  1900Counting:  2000Counting:  2100     869 files ignored.
+
+http://cloc.sourceforge.net v 1.64  T=9.06 s (198.4 files/s, 28871.1 lines/s)
+--------------------------------------------------------------------------------
+Language                      files          blank        comment           code
+--------------------------------------------------------------------------------
+Javascript                     1408          27840          57156         140775
+JSON                            206              1              0          24771
+XML                              44              0              0           3623
+HTML                             17            245             59           1960
+Python                           11            116            298            826
+CSS                               7            108             10            742
+Objective C                      19            228            104            553
+CoffeeScript                      3            105             59            476
+make                              9             58             23            219
+Bourne Again Shell                1             20             21            123
+YAML                             24              3              0            120
+Bourne Shell                     10             25             21            113
+C/C++ Header                     17            107             80            105
+DOS Batch                         6             24              2             99
+Scala                             8             36             27             82
+Java                              2              9              8             28
+Groovy                            2              5              0             28
+Kotlin                            2              8              8             28
+Handlebars                        1              3              0             19
+--------------------------------------------------------------------------------
+SUM:                           1797          28941          57876         174690
+--------------------------------------------------------------------------------

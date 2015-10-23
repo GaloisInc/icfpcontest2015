@@ -1,0 +1,23 @@
+/* Style sheet for simulator/editor */
+
+.spot {
+  position: absolute;
+  -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  background-color: rgba(0,0,0,0.5);
+  text-align: center;
+  vertical-align: middle;
+  color: #666;
+}
+.shape { position: absolute; }
+.piece { background-color: #ccf; }
+.blank { background-color: rgba(200,200,200,0.3); }
+.center { position: absolute;
+          background-color: rgba(0,0,0,0.3);
+          border-radius: 100px;
+        }
+.full { background-color: #fc6; }
+.board { position: relative; margin: 5px; }
+.board.shape { display: inline-block; }
+.help .key { font-weight: bold; }
+
+

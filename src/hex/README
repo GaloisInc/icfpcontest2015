@@ -1,0 +1,20 @@
+To "check" is a solution is valid:
+
+cat SOLUTIONFILE | hexEval check PROBLEM_ID SEED
+
+This will print the solution score, and some info.
+
+
+To "record" a video:
+
+cat SOLUTIONFILE | hexEval video PROBLEM_ID SEED [START_FRAME] [NUM_FRAMES] > web/steps.js
+
+The SOLUTIONFILE should contain only the commands (no JSON stuff)
+PROBLEM_ID is a number between 0 and 24
+SEED is whatever seed
+START_FRAME is optional, and it allows recording from some point on.  Useful for large solutions.
+NUM_FRAMES limits how many frames to record.
+
+To see the video, open "watch.html", which imports "steps.js"
+
+

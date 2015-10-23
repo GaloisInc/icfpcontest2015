@@ -1,0 +1,23 @@
+     100 files     200 files     300 files     400 files     500 files     600 files     613 text files.
+classified 605 filesDuplicate file check 605 files (555 known unique)Unique:      100 files                                          Unique:      200 files                                          Unique:      300 files                                          Unique:      400 files                                          Unique:      500 files                                               593 unique files.                              
+Counting:  100Counting:  200Counting:  300Counting:  400Counting:  500     227 files ignored.
+
+http://cloc.sourceforge.net v 1.64  T=3.35 s (118.0 files/s, 79569.4 lines/s)
+---------------------------------------------------------------------------------------
+Language                             files          blank        comment           code
+---------------------------------------------------------------------------------------
+Lua                                     29            632            164         117349
+C/C++ Header                           233           6513           8151          36460
+C                                       39           4925           3841          34257
+Bourne Shell                            10           3394           3977          22835
+m4                                       2            975             96           8660
+MSBuild script                          10              0              0           6568
+C++                                     27            858            212           3170
+HTML                                     6            591              0           1888
+CMake                                   20             75              8            343
+make                                    17             14             22            161
+Windows Module Definition                1              0              0            155
+Windows Resource File                    1              3              6             31
+---------------------------------------------------------------------------------------
+SUM:                                   395          17980          16477         231877
+---------------------------------------------------------------------------------------

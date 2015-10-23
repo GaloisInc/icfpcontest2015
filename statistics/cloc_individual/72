@@ -1,0 +1,19 @@
+     100 files     200 files     300 files     400 files     500 files     600 files     700 files     732 text files.
+classified 732 filesDuplicate file check 732 files (664 known unique)Unique:      100 files                                          Unique:      200 files                                          Unique:      300 files                                          Unique:      400 files                                          Unique:      500 files                                          Unique:      600 files                                               731 unique files.                              
+Counting:  100Counting:  200Counting:  300Counting:  400Counting:  500Counting:  600Counting:  700     164 files ignored.
+
+http://cloc.sourceforge.net v 1.64  T=3.30 s (179.6 files/s, 39051.9 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+Perl                           387          27310          29680          47171
+JSON                           189              0              0          23072
+PHP                              4             95             67            478
+C/C++ Header                     4             74             37            310
+Javascript                       2             55             14            171
+Python                           2             25             18            103
+Bourne Shell                     3              8              0             10
+make                             1              0              0              2
+-------------------------------------------------------------------------------
+SUM:                           592          27567          29816          71317
+-------------------------------------------------------------------------------

@@ -1,0 +1,38 @@
+     100 files     200 files     300 files     400 files     500 files     600 files     700 files     800 files     900 files    1000 files    1100 files    1200 files    1300 files    1400 files    1500 files    1600 files    1700 files    1800 files    1900 files    2000 files    2100 files    2200 files    2300 files    2400 files    2500 files    2600 files    2700 files    2800 files    2900 files    3000 files    3100 files    3200 files    3300 files    3400 files    3500 files    3600 files    3700 files    3800 files    3900 files    4000 files    4100 files    4200 files    4300 files    4400 files    4500 files    4600 files    4700 files    4800 files    4900 files    5000 files    5100 files    5200 files    5300 files    5400 files    5500 files    5566 text files.
+classified 5548 filesDuplicate file check 5548 files (3155 known unique)Unique:      100 files                                          Unique:      200 files                                          Unique:      300 files                                          Unique:      400 files                                          Unique:      500 files                                          Unique:      600 files                                          Unique:      700 files                                          Unique:      800 files                                          Unique:      900 files                                          Unique:     1000 files                                          Unique:     1100 files                                          Unique:     1200 files                                          Unique:     1300 files                                          Unique:     1400 files                                          Unique:     1500 files                                          Unique:     1600 files                                          Unique:     1700 files                                          Unique:     1800 files                                          Unique:     1900 files                                          Unique:     2000 files                                          Unique:     2100 files                                          Unique:     2200 files                                          Unique:     2300 files                                          Unique:     2400 files                                          Unique:     2500 files                                          Unique:     2600 files                                          Unique:     2700 files                                          Unique:     2800 files                                          Unique:     2900 files                                          Unique:     3000 files                                          Unique:     3100 files                                              5471 unique files.                              
+Counting:  100Counting:  200Counting:  300Counting:  400Counting:  500Counting:  600Counting:  700Counting:  800Counting:  900Counting:  1000Counting:  1100Counting:  1200Counting:  1300Counting:  1400Counting:  1500Counting:  1600Counting:  1700Counting:  1800Counting:  1900Counting:  2000Counting:  2100Counting:  2200Counting:  2300Counting:  2400Counting:  2500Counting:  2600Counting:  2700Counting:  2800Counting:  2900Counting:  3000Counting:  3100Counting:  3200Counting:  3300Counting:  3400Counting:  3500Counting:  3600Counting:  3700Counting:  3800Counting:  3900Counting:  4000Counting:  4100Counting:  4200Counting:  4300Counting:  4400Counting:  4500Counting:  4600Counting:  4700Counting:  4800Counting:  4900Counting:  5000Counting:  5100Counting:  5200Counting:  5300Counting:  5400    2779 files ignored.
+
+http://cloc.sourceforge.net v 1.64  T=18.58 s (150.3 files/s, 25356.8 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+HTML                          1294          23059            220         203575
+C++                            301          11771           9933          49459
+C/C++ Header                   281           9901          24453          37799
+CMake                          662           7355          22923          35891
+Javascript                      10           2062           2265           9042
+Bourne Shell                    88           1052            978           6131
+XAML                            15            193           2156           1750
+MSBuild script                  13              0             28           1452
+CSS                              9            347             90           1312
+XML                              4            180             27           1003
+m4                               8            100             43            933
+make                            11            189             96            714
+C#                              15            131            171            644
+C                               11             79             24            465
+Lisp                             1             53             86            270
+vim script                       3             26             51            126
+ASP.Net                         10              0              0             83
+Java                             1             11              0             65
+Fortran 77                       6              3              2             58
+PowerShell                       3             10              5             47
+Objective C++                    1             10             27             41
+JSON                            33              0              0             33
+DOS Batch                        6              9              0             33
+YAML                             1              0              0             23
+Fortran 90                       3              0              2             20
+Ant                              1             15             52             15
+Assembly                         1              1              2              1
+-------------------------------------------------------------------------------
+SUM:                          2792          56557          63634         350985
+-------------------------------------------------------------------------------

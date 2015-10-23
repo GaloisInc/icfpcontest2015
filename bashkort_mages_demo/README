@@ -1,0 +1,152 @@
+--------------------------------------------------------------------------------
+          _______ _    _ ______     _____ _____  ______ _      _
+         |__   __| |  | |  ____|   / ____|  __ \|  ____| |    | |
+            | |  | |__| | |__     | (___ | |__) | |__  | |    | |
+            | |  |  __  |  __|     \___ \|  ___/|  __| | |    | |
+            | |  | |  | | |____    ____) | |    | |____| |____| |____
+            |_|  |_|  |_|______|  |_____/|_|    |______|______|______|
+
+                (a word or formula believed to have magic power)
+
+
+Cast by WILD BASHKORT MAGES as part of the ICFP Programming Contest 2015.
+
+... with love, from Bashkortostan, best country in the world.
+    (https://en.wikipedia.org/wiki/Bashkortostan)
+
+
+  Akhmetzyanov D. (linesprower@gmail.com)
+    Head of Ufa State Automation Technical University.
+      Credit: programming, eating, and sleeping; also, programming.
+
+  Mouratov M. (mmouratov@gmail.com)
+    Deputy of Bashkortostan Ministry of Love.
+      Credit: direction, choreography, friendship, and magic.
+
+  Ripatti A. (ripatti@inbox.ru)
+    Yes, it's him. Representing Bashkortostan Opera House.
+      Credit: baritone, beard, wisdom, and the lost art of video encoding.
+
+
+  For the soundtrack, we have shamefully borrowed fragments of:
+    1) Richard Strauss -- Also Sprach Zarathustra, Op. 30, performed by some
+       awesome orchestra (we don't know exactly -- found it on youtube).
+
+    2) A certain national anthem from "Borat". Hi, Borat, if you read this!
+
+
+--------------------------------------------------------------------------------
+      _______ _    _ ______    _____  _____ _______ _    _         _
+     |__   __| |  | |  ____|  |  __ \|_   _|__   __| |  | |  /\   | |
+        | |  | |__| | |__     | |__) | | |    | |  | |  | | /  \  | |
+        | |  |  __  |  __|    |  _  /  | |    | |  | |  | |/ /\ \ | |
+        | |  | |  | | |____   | | \ \ _| |_   | |  | |__| / ____ \| |____
+        |_|  |_|  |_|______|  |_|  \_\_____|  |_|   \____/_/    \_\______|
+
+   (a sacred ceremony in which the actions follow a prescribed order and form)
+
+
+Conducted by WILD BASHKORT MAGES at the ICFP Contest 2015 Award Ceremony.
+
+The enchanted digital artifact you now possess is meant to be activated on
+the supported platforms in order to reproduce a realistic simulation of the
+enriched and augmented version of THE RITUAL, given that basic support for
+OpenGL is present (any modern PC should be fine).
+
+All of the library dependencies are already included in the distribution.
+Just run "bashkortostan" and let us know if something goes wrong.
+
+Press SPACE to pause the demo, ESC to quit.
+
+The "-windowed" command line switch (with "-width [int]" and "-height [int]",
+optionally) can be used to constrain our magic to windowed mode, although
+we strongly advise against it. One more available command is "-novsync".
+
+
+--------------------------------------------------------------------------------
+      _______ _    _ ______             _   _ _______ _    _ ______ __  __
+     |__   __| |  | |  ____|      /\   | \ | |__   __| |  | |  ____|  \/  |
+        | |  | |__| | |__        /  \  |  \| |  | |  | |__| | |__  | \  / |
+        | |  |  __  |  __|      / /\ \ | . ` |  | |  |  __  |  __| | |\/| |
+        | |  | |  | | |____    / ____ \| |\  |  | |  | |  | | |____| |  | |
+        |_|  |_|  |_|______|  /_/    \_\_| \_|  |_|  |_|  |_|______|_|  |_|
+
+     (a choral composition, the singing of which causes a dramatic effect)
+
+                 -.-
+               `-o.o/:.     .-/..`    `
+               -s.....ooos//o...o...-.sy`      `::
+             :.o...........o......oo....o/`   `s.o.           `     `
+            /o....o........o....o..oo.....o::o.o..o-://:-/:/:.o/-...o.o-
+        .o..o...o.....o...oo.o......o.............oo....o.......o....o:
+        .o......o.......o............o..............o...o.....o......o/
+         `.ooo..oo....o.......o.......o............o.........o.......s:.
+           ``.o..o..o.......o..o....oo................................o:
+           -.....o....o...o.........o...........o...........o.oo......oso/:-
+         `.o....o.......o....o......o..o......o.o............o....o..ooo..:`
+        .o.......o......o...........o..o........o...o..o...o.o.......s````
+      .o.........o.....o........oo.o....o...........o...o...oo...oyso/.
+ .-///o.....o........o.o........o..............o/` `````.o.....os:...
+-s..........o.........o.......o........o......o:        o.s-...ss.`
+ .:/o.......o.........o.......o.......o.....o.s.        o.o `.so.o:
+    /os.......o.....o.....oo...oo....o..o.....o.        ...  `..:.        `::-..
+     .o.......o..oo......ooo.........o........o-         `                ....o-
+     ...o....o..oo......o...o.......oo....o.o.oo.:-.                    -.....s
+   ./o...........o.....o.....o..........o.o......ooo/.            `.:../o.....-
+   o.........o....o....o.........ooo...oo............o:   .:/./../..o.......s-
+  .o.........o....o..o........o......oo........o......././..........o.......o/
+  -o.o......oooo.......................o.......o....................o..........
+  .o...o.......o...........oo.........o........o...................o....o....o`
+   s....o.......o...........o........o........o..................o.....o-```..
+   :o...o.......o.........oo........o...........................o.......
+    ....oooo.oo...........o........o..........o.................o......`
+    .o........o......oo..ooo....o..o........o.o..................ooo:
+     -.o.......o......oo.o.........o.o.ooooooooo................o..o.
+       .o.....o.........oo........o...........oooo............oo...o`
+        -.....ooo.....o...o......o.............o..oooooooooo.oo...oo`
+         `.....oo.....o....o.....o............o............o.......o.
+          `--.:.o...........oo.o.o...........oo............o.......o.
+               .o...o..o....o....oo.....oooooo.....................o/
+                ``  o........o.....oooooo.o................o........s`
+                    .o.......o............ooo.............o..o.....o.:
+                     -o.....o...............ooo.........oo........o/
+                      /..oo...o.o.............oooo....ooo.........s`
+                      `...o......oo...............ooooo............/
+                        soo.......oo.........oooooooooo...........o:
+                        ``.s....oo.-//oooooooo......o..oo..........s.
+                           s...s:    -o.................ooo........o-
+                           -:/.:      o......o.............o........o/
+                                    `/o.o....oo..............ooooo/-:`
+                                   .so/.o....o...................o`
+                                    ``  `o.....o..o...............s
+                                         -o.......o.o............./
+                                         so..........o.ooo.......o.
+                                         :oooo....oo.s`   -/oo:--`
+                                          .o.-.o.oo .`
+                                          -/-  /.-
+
+
+              Bashkortostan -- best country in the world,
+              All other countries are run by little girls.
+              Bashkortostan -- top exporter of programmers,
+              Other countries have inferior programmers.
+
+              Bashkortostan -- number one in technology,
+              Computer science and algebraic topology.
+              Our computing cluster -- a marvel to behold,
+              Its NP-hard disk is almost twenty years old.
+
+              Bashkortostan, you are very nice place,
+              From slums of Belebey to avenues of Ufa.
+              Bashkortostan -- friend of all excluding Tatarstan,
+              They speak Tatar language instead of Башҡортса.
+
+              Bashkortostan industry best in world,
+              We invented honey and crude oil.
+              Bashkortostan scientists greatest in the region,
+              Except of course for being unknown.
+
+              Bashkortostan, Ei!, is very nice place,
+              We protect it with awesome wild magic.
+              Fate of the Earth is complete domination
+              By the glorious nation of Bashkortostan!

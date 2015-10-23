@@ -1,0 +1,46 @@
+Description: First draft of database schema
+Created: 2015-07-28 21:12:20.588706 UTC
+Depends:
+Apply: |
+  CREATE TABLE teams (
+    id          SERIAL  PRIMARY KEY,
+    created_at  timestamp  NOT NULL,
+    name        text    NOT NULL
+  );
+
+  CREATE TABLE users (
+    id          SERIAL     PRIMARY KEY,
+    created_at  timestamp  NOT NULL,
+    email       text       UNIQUE NOT NULL,
+    api_token   text       NOT NULL
+  );
+
+  CREATE TABLE teams_users (
+    id       SERIAL   PRIMARY KEY,
+    team_id  integer  REFERENCES teams (id) ON DELETE CASCADE NOT NULL,
+    user_id  integer  REFERENCES users (id) ON DELETE CASCADE NOT NULL
+  );
+
+  CREATE TABLE problems (
+    id            SERIAL     PRIMARY KEY,
+    created_at    timestamp  NOT NULL,
+    content_path  text       NOT NULL
+  );
+
+  CREATE TABLE solutions (
+    id            SERIAL     PRIMARY KEY,
+    created_at    timestamp  NOT NULL,
+    problem_id    integer    REFERENCES problems (id) ON DELETE CASCADE NOT NULL,
+    team_id       integer    REFERENCES teams    (id) ON DELETE CASCADE NOT NULL,
+    author_id     integer    REFERENCES users    (id) ON DELETE CASCADE NOT NULL,
+    content_path  text       NOT NULL,
+    tag           text       NOT NULL,
+    score         integer    DEFAULT NULL
+  );
+
+Revert: |
+  DROP TABLE solutions;
+  DROP TABLE problems;
+  DROP TABLE teams_users;
+  DROP TABLE users;
+  DROP TABLE teams;

@@ -1,0 +1,26 @@
+{
+  "name": "icfp-submissions",
+  "version": "1.0.0",
+  "description": "Client implementation for ICFP submissions 2015",
+  "scripts": {
+    "test": "node_modules/.bin/flow check",
+    "start": "scripts/run.sh"
+  },
+  "author": "Galois, Inc.",
+  "license": "Copyright 2015 Galois Inc., all rights reserved",
+  "devDependencies": {
+    "babel-loader": "git://github.com/babel/babel-loader",
+    "flow-bin": "^0.14.0",
+    "webpack": "^1.9.10"
+  },
+  "dependencies": {
+    "es6-promise": "^2.3.0",
+    "hash-brown-router": "^1.5.0",
+    "immutable": "^3.7.4",
+    "lens": "hallettj/lens.js#76222b94236726e46fc8757096ccc22bc0d466c2",
+    "react": "^0.13.3",
+    "react-bootstrap": "^0.24.3",
+    "sunshine": "hallettj/sunshine#7609c3f7824df98ea6582c272e5d243a501fec31",
+    "whatwg-fetch": "^0.9.0"
+  }
+}

@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# parameter $1 = directory of output files to score
+# parameter $2 = list of power words in Haskell format
+
+if [[ $# -ne 2 ]]; then
+  echo "usage: score_all <solutions-directory> <power-word-list>"
+  exit 1
+fi
+
+for i in $1/*; do
+  TEAM=$(basename $i)
+  TEAMDIR=`pwd`/$i
+  echo "Team $TEAM";
+  for j in $(find $TEAMDIR -name "*.json"); do
+    PROBLEM=$(basename $j);	
+    echo "Scoring file $PROBLEM"
+    ~/hexEval check-stdin $2 $TEAM "dbname=icfp_results" < "$j" > "$TEAMDIR/score-$PROBLEM.txt"
+  done
+done
+
+

@@ -1,0 +1,110 @@
+= Do something about words without vowels? (what about abbreviations?)
+= Do pairs of words, not just singles.
+= Hash by soundex -- probably won't work out very well.
+= Randomly bounce to a similar sounding word -- sometimes, or all the time,
+  or weighted by frequencies of the respective words.
+= Make it possible to load in a saved file, then suck more data into it
+  (make files.c be able to create either `words' or `pwords'.)
+= Make it able to descend directory trees.
+= Make it able to talk HTTP?  NNTP?
+= Do interesting typography: enumerated lists, subtitles, (Do it with HTML,
+  too.)
+= Insert random whitespace to make it look like poetry.
+= Count syllables to make haiku.  Loop regenerating sentences until we get
+  ones that have word and sentence breaks in the right places.  Counting 
+  syllables is hard -- have to snarf a hyphenation algorithm from somewhere.
+
+
+Here are some ideas I plan to someday implement for v2.0, unless someone
+beats me to it:
+
+  * pwords don't point to strings, because they aren't just single words
+    any more.  the key is the string, and the pword object itself contains
+    only statistics about the string under which it was indexed.
+
+  * pword->succ always points to pwords that are single words.
+    but the pwords table contains both kinds.
+
+  * to record text:
+    for each sentence
+      there is an N-word buffer, initially empty
+      for each word
+	for each cdr of the buffer (0-N, 1-N, 2-N, ... N)
+	  look up the cdr in the pwords table
+	  index this word under the pword we just found
+	add this word to end buffer, dropping the old word 0 off the end
+
+  * to generate text:
+    while generating sentences
+      pick a random sentence-start word
+      there is an N-word buffer, initially empty (which is <= value of N)
+      while not done
+        pick a random number R, from 0 to min(N, size-of-buffer)
+        look up a pword in the table, using the last R words as the key
+        (while there is no match, --R and try again)
+        emit that word
+        push that word onto the end of the buffer
+
+The idea here is that, given N=3, and the input text
+
+	All work and no play makes Jack a dull boy
+
+when scanning that text we would record these associations:
+
+	"all"		  --> "work"
+
+	"all work"	  --> "and"
+	"work"		  --> "and"
+
+	"all work and"	  --> "no"
+	"work and"	  --> "no"
+	"and"		  --> "no"
+
+	"work and no"	  --> "play"
+	"and no"	  --> "play"
+	"no"		  --> "play"
+
+	"and no play"	  --> "makes"
+	"no play"	  --> "makes"
+	"play"		  --> "makes"
+
+	"no play makes"	  --> "jack"
+	"play makes"	  --> "jack"
+	"makes"		  --> "jack"
+
+	"play makes jack" --> "a"
+	"makes jack"	  --> "a"
+	"jack"		  --> "a"
+
+	"makes jack a"	  --> "dull"
+	"jack a"	  --> "dull"
+	"a"		  --> "dull"
+
+	"jack a dull"	  --> "boy"
+	"a dull"	  --> "boy"
+	"dull"		  --> "boy"
+
+When generating:
+
+  * suppose we already have picked the sequence "all work and no".
+  * pick a random number from 1-N.
+    * if 1: look up "no"
+    * if 2: look up "and no"
+    * if 3: look up "work and no"
+
+  * pick a random successor to the pword associated with the string we
+    looked up ("play".)
+
+  * now we've got "all work and no play".
+  * repeat.
+
+If "work and no" wasn't found in the table (meaning we generated it, but
+it never occurred in nature) then we would decrease N and look up "and no".
+If that didn't match either, we'd look up "no".  That way, word sequences
+which had actually occurred together are more likely to be chosen than
+ones that didn't.
+
+The N used for generating can't usefully be larger than the N used for
+recording.  The N used for recording is an important tunable paramter,
+that is probably language-centric; I'd guess that 3 is good for English.
+The larger N, the more likely one is to regenerate the exact input text.

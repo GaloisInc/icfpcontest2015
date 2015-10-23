@@ -1,0 +1,23 @@
+     100 files     200 files     300 files     400 files     500 files     600 files     700 files     800 files     900 files     935 text files.
+classified 898 filesDuplicate file check 898 files (849 known unique)Unique:      100 files                                          Unique:      200 files                                          Unique:      300 files                                          Unique:      400 files                                          Unique:      500 files                                          Unique:      600 files                                          Unique:      700 files                                          Unique:      800 files                                               898 unique files.                              
+Counting:  100Counting:  200Counting:  300Counting:  400Counting:  500Counting:  600Counting:  700Counting:  800     194 files ignored.
+
+http://cloc.sourceforge.net v 1.64  T=3.23 s (229.8 files/s, 51561.0 lines/s)
+--------------------------------------------------------------------------------
+Language                      files          blank        comment           code
+--------------------------------------------------------------------------------
+Standard ML                     518           9536          14609          50967
+C++                              69           4719           5824          21485
+C/C++ Header                     92           4509           9102          21147
+JSON                             30              1              0          10732
+Javascript                        4           2010           2052           8375
+Python                            9             91             33            578
+C                                 2             62              5            223
+make                             14             68             27            128
+Bourne Again Shell                1             25             48            114
+HTML                              1              0              0             14
+XML                               1              0              0             11
+Bourne Shell                      1              1              0              2
+--------------------------------------------------------------------------------
+SUM:                            742          21022          31700         113776
+--------------------------------------------------------------------------------

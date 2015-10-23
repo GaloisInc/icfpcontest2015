@@ -1,0 +1,31 @@
+I:
+
+GridShape { center = Grid 2 2, members = [Grid 0 0, Grid 1 0, Grid 2 0, Grid 3 0, Grid 1 1, Grid 1 2, Grid 1 3, Grid 0 4, Grid 1 4, Grid 2 4, Grid 3 4]}
+
+C:
+
+GridShape { center = Grid 2 2, members = [Grid 1 0, Grid 2 0, Grid 3 0, Grid 0 1, Grid 0 2, Grid 0 3, Grid 1 4, Grid 2 4, Grid 3 4]}
+
+F:
+
+GridShape { center = Grid 1 3, members = [Grid 0 0, Grid 1 0, Grid 2 0, Grid 0 1, Grid 0 2, Grid 1 2, Grid 2 2, Grid 0 3, Grid 0 4]}
+
+P:
+
+GridShape { center = Grid 1 2, members = [Grid 0 0, Grid 1 0, Grid 2 0, Grid 0 1, Grid 2 1, Grid 0 2, Grid 1 2, Grid 2 2, Grid 0 3, Grid 0 4]}
+
+2:
+
+GridShape { center = Grid 2 2, members = [Grid 0 0, Grid 1 0, Grid 2 0, Grid 2 1, Grid 1 2, Grid 2 2, Grid 0 3, Grid 0 4, Grid 1 4, Grid 2 4, Grid 3 4]}
+
+0:
+
+GridShape { center = Grid 2 2, members = [Grid 1 0, Grid 2 0, Grid 3 0, Grid 0 1, Grid 3 1, Grid 0 2, Grid 4 2, Grid 0 3, Grid 3 3, Grid 1 4, Grid 2 4, Grid 3 4, Grid 2 2]}
+
+1:
+
+GridShape { center = Grid 2 2, members = [Grid 1 0, Grid 2 0, Grid 1 1, Grid 2 1, Grid 2 2, Grid 2 3, Grid 0 4, Grid 1 4, Grid 2 4, Grid 3 4]}
+
+5:
+
+GridShape { center = Grid 2 2, members = [Grid 0 0, Grid 1 0, Grid 2 0, Grid 3 0, Grid 0 1, Grid 1 2, Grid 2 2, Grid 3 2, Grid 3 3, Grid 0 4, Grid 1 4, Grid 2 4, Grid 3 4]}

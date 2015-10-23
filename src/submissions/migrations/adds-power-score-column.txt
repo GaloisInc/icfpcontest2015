@@ -1,0 +1,8 @@
+Description: (Description here.)
+Created: 2015-08-06 01:55:59.26356 UTC
+Depends: create-initial-tables
+Apply: |
+  ALTER TABLE solutions ADD COLUMN power_score integer;
+
+Revert: |
+  ALTER TABLE solutions DROP COLUMN power_score;

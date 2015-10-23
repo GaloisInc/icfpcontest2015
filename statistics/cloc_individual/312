@@ -1,0 +1,25 @@
+     100 files     200 files     300 files     400 files     500 files     600 files     700 files     800 files     900 files    1000 files    1100 files    1200 files    1215 text files.
+classified 1213 filesDuplicate file check 1213 files (769 known unique)Unique:      100 files                                          Unique:      200 files                                          Unique:      300 files                                          Unique:      400 files                                          Unique:      500 files                                          Unique:      600 files                                          Unique:      700 files                                              1148 unique files.                              
+Counting:  100Counting:  200Counting:  300Counting:  400Counting:  500Counting:  600Counting:  700Counting:  800Counting:  900Counting:  1000Counting:  1100     343 files ignored.
+
+http://cloc.sourceforge.net v 1.64  T=4.22 s (207.2 files/s, 29871.5 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+Javascript                     696          12741           7074          69101
+HTML                             4           1094              3          15940
+JSON                           134              2              0          15147
+C/C++ Header                     1            367             26           1938
+Perl                             1             87            170            582
+Python                           1             81            175            356
+C++                              1             58             13            287
+make                             9             62            109            235
+YAML                            16             19             20            143
+XML                              3              8              2            126
+Bourne Shell                     5             21             15             69
+D                                2              0              0             34
+C                                1              7              4             23
+Lisp                             1              0              0              6
+-------------------------------------------------------------------------------
+SUM:                           875          14547           7611         103987
+-------------------------------------------------------------------------------

@@ -1,0 +1,98 @@
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<script src="jquery.js"></script>
+<script src="view.js"></script>
+<script>
+var pivot = false
+
+function cell(s,c,r) {
+  if (s.on === undefined) s.on = []
+  if (s.on[r] === undefined) s.on[r] = []
+  if (s.on[r][c] === undefined) s.on[r][c] = false
+}
+
+function save(s) {
+
+  var minX = s.pivot.x
+  var minY = s.pivot.y
+  var members = []
+  for(row = 0; row < s.height; ++row) {
+    for(col = 0; col < s.width; ++col) {
+      cell(s,col,row)
+      var on = s.on[row][col]
+      if (on) {
+          members.push({x: col, y: row})
+          if (col < minX) minX = col
+          if (row < minY) minY = row
+      }
+    }
+  }
+  function upd(p) { return { x: p.x - minX, y: p.y - minY } }
+
+  jQuery.each(members, function(ix,m) { members[ix] = upd(m) })
+
+  function hsPt(x) { return 'Grid ' + x.x + ' ' + x.y }
+
+  var hs = "GridShape { center = " + hsPt(upd(s.pivot)) + ', members = ['
+  jQuery.each(members, function(ix,m) {
+    hs = hs + hsPt(m)
+    if (ix != members.length - 1) hs = hs + ', '
+  })
+  hs = hs + ']}'
+
+  return 'data:application/json;charset=utf-8;base64,' +
+         // btoa(JSON.stringify({ pivot: upd(s.pivot), members: members }))
+         btoa(hs)
+
+}
+
+
+function drawEditor(s) {
+  var d = drawContainer(s.width,s.height)
+
+  for(row = 0; row < s.height; ++row) {
+    for(col = 0; col < s.width; ++col) {
+      (function() {
+        var r = row
+        var c = col
+        cell(s,c,r)
+        var on = s.on[r][c]
+        var spot = drawSpot(on ? 'full' : 'blank', c, r, d)
+                   .bind('oncontextmenu', 'false')
+        // spot.text(c + ',' + r)
+        spot.click(function() {
+          if (pivot) {
+            s.pivot = { x: c, y: r }
+            $('body .center').remove()
+            drawCenter(s, d)
+          } else {
+            s.on[r][c] = !s.on[r][c]
+            spot.toggleClass('full').toggleClass('blank')
+          }
+
+          if (s.pivot !== undefined) {
+            $('#save').attr('href', save(s)).show()
+          }
+        })
+      })()
+    }
+  }
+
+  return d
+}
+
+$(document).ready(function() {
+  var b = $('body')
+  $(document)
+    .keydown(function() { pivot = true })
+    .keyup  (function() { pivot = false })
+  var s = { width: 15, height: 15 }
+  b.append(drawEditor(s))
+  b.append($('<a/>').text('save').attr('id','save').hide())
+})
+
+</script>
+</head>
+<body>
+</body>

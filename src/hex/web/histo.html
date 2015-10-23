@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<title>Leaderboard / ICFP 2015 Programming Contest</title>
+<script src="jquery.js"></script>
+<script src="rankings.js"></script>
+</style>
+<script>
+
+var onlyLight = [ 7, 22, 23, 25, 29, 49, 75, 78,
+  126, 129, 150, 158, 165, 196, 246, 265, 274 ]
+
+
+function drawScore(r,maxScore,stats) {
+  var maxH = 100
+  var score = r.score
+  var p = maxScore > 0 ? (score / maxScore) : 0
+
+//  if (jQuery.inArray(r.teamId,onlyLight) == -1) p = 0
+
+  if (stats[r.team] === undefined) stats[r.team] = 0
+  stats[r.team] += p * p
+
+
+  if (p > 0.80) {
+    c = 'red'
+ } else {
+    c = 'black'
+  }
+
+  return $('<div/>')
+         .css('height', maxH * p + 'px')
+         .css('width',  '10px')
+         .css('background-color', c)
+}
+
+function drawProblem(variant,setting,stats) {
+  var maxScore = 0
+  var scores = setting.rankings
+
+  jQuery.each(scores, function(ix,r) {
+    if (r.score > maxScore) maxScore = r.score
+  })
+
+  var row = $('<tr/>')
+  row.append($('<td/>').text(variant.name + ' ' + setting.setting))
+
+  jQuery.each(scores, function(ix,r) {
+    row.append($('<td/>')
+               .css('vertical-align', 'bottom')
+               .append(drawScore(r,maxScore,stats)))
+  })
+
+  return $('<table/>')
+         .css('border-collapse', 'collapse')
+         .append(row)
+}
+
+$(document).ready(function() {
+  var b = $('body')
+  var stats = {}
+  jQuery.each(data.variants, function(ix,v) {
+    jQuery.each(v.settings, function(ix,s) {
+      b.append(drawProblem(v,s,stats))
+    })
+  })
+
+  var stats1 = []
+  jQuery.each(stats, function(k,v) { stats1.push({'name':k, 'value': v}) })
+
+  stats1 = stats1.sort(function(x,y) { return y.value - x.value })
+
+  var table = $('<table/>')
+  jQuery.each(stats1, function(ix,n) {
+    if (ix > 15) return false
+    table.append($('<tr/>')
+                 .append($('<td/>').text(ix + 1))
+                 .append($('<td/>')
+                         .css('max-width','10em')
+                         .text(n.name))
+                 .append($('<td/>').text(n.value)))
+  })
+  b.prepend(table)
+
+})
+
+
+
+</script>
+</head>
+<body>
+</body>
+</html>

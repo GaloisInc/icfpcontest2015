@@ -1,0 +1,46 @@
+0: 1,2,3 tetris
+1: Ei!
+2: 5 tetris
+3: Ia! Ia!  with 2,3,4 tetris
+4: 4 tetris
+5: R'lyeh with 2,3,4 tetris
+6: 1,2,3 tetris
+7: Yuggoth with 2,3,4 tetris
+11: off center dot & circle
+17: almost full lines, with some 1-pieces
+19: almost full lines, with some 1-pieces
+21: almost full lines, with some 1-pieces
+22: almost full lines, with some 2-pieces
+23: 3-lines with some obstacles
+27: 3-lines on a 9 by 12 grid
+
+
+
+
+
+
+8: 1 & 4 line pieces (make tall lines)
+9: 3 & 4 line pieces (better than 8)
+10: 2 off center with obstacles
+12: off center dot & circle & big circle
+13: aliens
+14: pentagram
+15: 4 separate dots in the pieces
+16: 1,2,3 tetris with junk on the board
+18: sunken city
+20: very off center pieces
+24: vancouver
+25: 3,4,5 tetris
+26: 3,4,5 tetris, with a line on the side
+28: exploded 3,4,5 tetris
+29: look ahead 1
+30: look ahead 1
+31: Yoggoth with more better pieces
+32: Nestagons
+
+
+[8,9,10,12,13,14,15,16,18,20,24,25,26,28,29,30,31,32]
+
+
+
+

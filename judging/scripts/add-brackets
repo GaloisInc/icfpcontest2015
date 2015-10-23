@@ -1,0 +1,5 @@
+#!/bin/bash
+filename=$(basename $1)
+echo "[" >> fixed-$filename
+cat $1 >> fixed-$filename
+echo "]" >> fixed-$filename

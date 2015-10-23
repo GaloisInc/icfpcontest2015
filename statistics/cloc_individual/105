@@ -1,0 +1,16 @@
+     100 files     148 text files.
+classified 148 filesDuplicate file check 148 files (146 known unique)Unique:      100 files                                               148 unique files.                              
+Counting:  100      25 files ignored.
+
+http://cloc.sourceforge.net v 1.64  T=1.25 s (114.1 files/s, 8326.3 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+OCaml                           64           1072           1265           6667
+HTML                             3            136              1            914
+make                             4             37              0            170
+JSON                            69              0              0             81
+Bourne Shell                     3             12              3             81
+-------------------------------------------------------------------------------
+SUM:                           143           1257           1269           7913
+-------------------------------------------------------------------------------

@@ -1,0 +1,10 @@
+package postfixlambda
+
+-- Postfix Lambda
+-- by David Raymond Christiansen
+
+opts = "--total -p effects"
+sourcedir = src
+modules = PostfixSTLC, PostfixSTLC.Shell, PostfixSTLC.Test, PostfixSTLC.Views, STLC, PostfixSTLC.Commands
+main = PostfixSTLC.Shell
+executable = postlambda

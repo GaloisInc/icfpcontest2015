@@ -1,0 +1,25 @@
+     100 files     184 text files.
+classified 183 filesDuplicate file check 183 files (173 known unique)Unique:      100 files                                               180 unique files.                              
+Counting:  100      22 files ignored.
+
+http://cloc.sourceforge.net v 1.64  T=0.86 s (188.6 files/s, 71946.9 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+XML                              6              0              0          52280
+C#                              87            971            368           5566
+Go                              12            126             22            975
+MSBuild script                   7              0             49            610
+XAML                             6              3              0            169
+Python                           4             48              0            162
+PowerShell                       2             42             14            120
+HTML                             1              0              0             89
+make                             1             12              3             38
+Javascript                       1              4              0             35
+ASP.Net                          6              0              0             31
+JSON                            25              0              0             25
+Bourne Shell                     3              3              0             10
+DOS Batch                        1              0              0              9
+-------------------------------------------------------------------------------
+SUM:                           162           1209            456          60119
+-------------------------------------------------------------------------------

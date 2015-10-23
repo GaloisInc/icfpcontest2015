@@ -1,0 +1,202 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<link rel="icon" type="image/png" href="logo-32x32.png">
+<title>Leaderboard / ICFP 2015 Programming Contest</title>
+<script src="jquery.js"></script>
+<script src="rankings.js"></script>
+<link href='//fonts.googleapis.com/css?family=UnifrakturMaguntia' rel='stylesheet' type='text/css'>
+<link href='web_style.css' rel='stylesheet' type='text/css'>
+</style>
+<script>
+
+
+function drawScore(r,maxScore) {
+  var maxH = 100
+  var score = r.score
+  var p = maxScore > 0 ? (score / maxScore) : 0
+  if (p > 0.80) { c = 'red' } else { c = '#ccc' }
+
+  return $('<div/>')
+         .css('height', maxH * p + 'px')
+         .css('width',  '10px')
+         .css('background-color', c)
+}
+
+function drawProblem(setting) {
+  var maxScore = 0
+  var scores = setting.rankings
+
+  jQuery.each(scores, function(ix,r) {
+    if (r.score > maxScore) maxScore = r.score
+  })
+
+  var row = $('<tr/>')
+  jQuery.each(scores, function(ix,r) {
+    if (r.score === 0) return true
+    row.append($('<td/>')
+               .css('vertical-align', 'bottom')
+               .append(drawScore(r,maxScore)))
+  })
+
+  return $('<table/>')
+         .css('border-collapse', 'collapse')
+         .css('margin-bottom', '1em')
+         .append(row)
+}
+
+
+
+function renderTeam(tid,t,tags) {
+
+  var teamClass = "cl_" + tid
+  var tagTxt = $('<div/>').text(tags.join(', ')).hide()
+  var team_name = $('<span/>').text('(' + tid + ')' + t)
+  var tag_link = $('<span/>').text(' (see tags)')
+                 .click(function() {
+                    tagTxt.toggle()
+                 })
+
+
+  var d = $('<div/>').addClass('team').addClass(teamClass).append(team_name)
+  if (tags.length > 0) d.append([team_name,tag_link,tagTxt])
+  d.click(function() {
+    $('.team').removeClass('selected')
+    $('.team.' + teamClass).addClass('selected')
+  })
+
+  return d
+}
+
+function renderRanks(s, withPower) {
+  var table = $('<table/>').addClass('ranking')
+  var power = withPower ? [ $('<th/>').text('Power') ] : []
+  table.append($('<tr/>')
+              .append($('<th/>').text('Rank'))
+              .append($('<th/>').text('Score'))
+              .append($('<th/>').text('Team Name'))
+              .append(power)
+              )
+
+  var curRank = 0
+
+  jQuery.each(s, function(ix,r) {
+
+    if (r.score === 0) return true
+    cell = $('<td/>')
+    var power = withPower ? [ $('<td/>').addClass('power')
+                                        .text(r.power_score) ] : []
+    table.append($('<tr/>')
+              .append($('<td/>').addClass('rank').text(r.rank))
+              .append($('<td/>').addClass('score').text(r.score))
+              .append(cell)
+              .append(power)
+              )
+    curRank = r.rank
+    cell.append(renderTeam(r.teamId, r.team, r.tags))
+  })
+  return table
+}
+
+var hackCurSetting
+
+function renderSetting(i,s) {
+  var t = renderRanks(s.rankings,true)
+          .addClass('setting')
+
+  var btn = $('<div/>')
+            .addClass('setting header').text(s.setting)
+
+  var histo = drawProblem(s)
+
+  var me = $('<div/>')
+           .append([histo,t])
+           .addClass('rank-table')
+           .hide()
+
+  function handler() {
+    $('.rank-table').hide()
+    $('.setting.header').removeClass('selected')
+    btn.addClass('selected')
+    me.show()
+    hackCurSetting = i
+  }
+
+
+  btn.click(handler)
+
+
+  return { btn: btn, rank: me, handler: handler }
+}
+
+
+function renderVairant(midL,midR,right) {
+  return function(vix,v) {
+
+    var ours = []
+
+    var btn = $('<div/>')
+              .text(v.name)
+              .addClass('variant')
+
+    function handler() {
+      $('.setting.header').hide()
+      $('.rank-table').hide()
+      $('.variant').removeClass('selected')
+      btn.addClass('selected')
+      btn.show()
+      jQuery.each(ours,function(ix,o) { o.btn.show() })
+      if (hackCurSetting !== undefined && ours[hackCurSetting] !== undefined)
+          ours[hackCurSetting].handler()
+    }
+
+    btn.click(handler)
+    midL.append(btn)
+
+    jQuery.each(v.settings, function(ix,s) {
+      var x = renderSetting(ix,s)
+      ours.push(x)
+      x.btn.hide()
+      midR.append(x.btn)
+      right.append(x.rank)
+    })
+    if (vix === 0) { hackCurSetting = 0; handler(); }
+  }
+}
+
+
+$(document).ready(function() {
+  var b = $('body')
+  var tab=$('#tables')
+  var left=$('#left')
+  var midL=$('#midL')
+  var midR=$('#midR')
+  var right=$('#right')
+
+  left.append(renderRanks(data.rankings,true))
+  jQuery.each(data.variants, renderVairant(midL,midR,right) )
+
+//  $('#updated').text(data.time)
+})
+</script>
+</head>
+<body>
+<img src="http://icfpcontest.org/icfp_small.png">
+<h1>Leaderboard</h1>
+<div id="updated"></div>
+<p>The white leaderboard on the left has the overall standings.
+The black leaderboards on the right contain the individual team rankings
+for each of the problems.  You may switch between the leaderboards
+by clicking on the problem names.  You may highlight the entries for a
+particular team by clicking on the team name.
+</p>
+<div width="100%">
+<table id="tables">
+<tr><th>Overall Standings</th><th>Variant</th><th>Problem</th><th>Problem Leaderboards</th></tr>
+<tr><td id="left"></td><td id="midL"></td><td id="midR"></td><td id="right"></td></tr>
+</table>
+</div>
+</body>
+</html>

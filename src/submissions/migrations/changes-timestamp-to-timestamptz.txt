@@ -1,0 +1,14 @@
+Description: (Description here.)
+Created: 2015-07-31 21:55:19.660193 UTC
+Depends: create-initial-tables
+Apply: |
+  ALTER TABLE teams     ALTER COLUMN created_at TYPE timestamptz;
+  ALTER TABLE users     ALTER COLUMN created_at TYPE timestamptz;
+  ALTER TABLE problems  ALTER COLUMN created_at TYPE timestamptz;
+  ALTER TABLE solutions ALTER COLUMN created_at TYPE timestamptz;
+
+Revert: |
+  ALTER TABLE teams     ALTER COLUMN created_at TYPE timestamp;
+  ALTER TABLE users     ALTER COLUMN created_at TYPE timestamp;
+  ALTER TABLE problems  ALTER COLUMN created_at TYPE timestamp;
+  ALTER TABLE solutions ALTER COLUMN created_at TYPE timestamp;

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+DIR=cloc_stats
+mkdir -p $DIR
+
+for i in implementations/*; do
+  cloc --exclude-dir=thirdparty,third_party,external,boost $i/latest/extracted > $DIR/$(basename $i)
+done
+

@@ -1,0 +1,8 @@
+Description: (Description here.)
+Created: 2015-07-31 20:42:35.230217 UTC
+Depends: create-initial-tables
+Apply: |
+  ALTER TABLE solutions ADD COLUMN seed integer NOT NULL;
+
+Revert: |
+  ALTER TABLE solutions DROP COLUMN seed;

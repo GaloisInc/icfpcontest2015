@@ -1,0 +1,40 @@
+Procedure:
+A. Compute ranks, as specified in the contest
+B. Compute ranks, not counting power words
+
+4 Teams are in the top 10 with either ranking, they qualify
+
+Unagi
+THIRTEEN
+Natsubate!
+Gaichi
+
+Take the remaining top 3 of ranking A
+
+Hack the pool
+WILD BANKSHOT MAGES
+ByCode
+
+Take the remaining top 3 of ranking B
+
+Begot
+7th_building
+Majesty Hash Conquer
+
+This gives us 10 finalists:
+
+45:  Unagi
+50:  THIRTEEN
+116: Natsubate!
+59:  Gachi
+
+127: Hack the pool
+42: WILD BANKSHOT MAGES
+30: ByCode
+
+136: Begot
+9:   7th_building
+36:  Majesty Hash Conquer
+
+One of the finalists (50: THIRTEEN) didn't build properly, so an additional 
+finalist (212: Play the VR game Bazaar!) was added.

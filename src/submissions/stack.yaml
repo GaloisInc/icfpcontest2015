@@ -1,0 +1,9 @@
+flags: {}
+packages:
+  - '.'
+extra-deps:
+  - mime-string-0.4
+  - servant-0.4.3.1
+  - servant-lucid-0.4.3.1
+  - servant-server-0.4.3.1
+resolver: lts-2.20

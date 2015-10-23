@@ -1,0 +1,11 @@
+#!/bin/bash
+
+DIR=$1
+
+for i in implementations/*; do
+  SLN=$(ls $i | grep 2015 | sort | tail -n 1)
+  pushd $i
+  ln -s "$SLN" latest
+  popd
+done
+

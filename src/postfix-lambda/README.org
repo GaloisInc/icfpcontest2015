@@ -1,0 +1,42 @@
+* The Postfix Lambda-Calculus Metaprogrammer
+
+This is a sketch of a devious language. It is a stack-based language
+with primitives for building up derivations in the simply-typed lambda
+calculus.
+
+The intention is that users are given tasks to solve using a
+lambda-calc-based language, but they must first write metaprograms in
+the stack language to generate the desired terms. This is completely
+horrible, so they'll in practice write compilers to the stack
+language. However, we can impose restrictions on the stack
+metaprograms that make the compiler nasty to write, potentially
+necessitating some hand-rolled bits in the middle.
+
+** To test out
+ * Run =idris --build postfixlambda.ipkg=, then execute
+   =./postlambda=. This may require Idris 0.9.18 due to better Unicode
+   output.
+
+** Extensions
+ * A more interesting underlying language - e.g. some variant of
+   extensional type theory, or maybe just System F or System Fω
+ * More interesting stack language, e.g. with procedures or exotic
+   stack manipulation instructions
+ * Hidden primitives that increase the power, such as general
+   recursion or call/cc. Solving earlier problems can yield the names
+   of these primitives, making later problems easier.
+
+** Use in contest
+ * Compile to JS and have in a web page for early try-outs
+ * Submission server that accepts emailed metaprograms and runs them
+   against tasks
+
+** Presentation
+ * We can present the stack programs as a "chant" and assign each
+   command a nonsense syllable that's vaguely reminiscent of the Black
+   Speech of Mordor.
+
+** Further extensions
+ * Reflective metametaprograms: the constructed programs might be able
+   to build stack programs that are then executed. This could be an
+   extension after the lightning round, for instance.

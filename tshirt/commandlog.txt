@@ -1,0 +1,7 @@
+  528  jp2a --invert --chars=1234567890 --height=100 cthulhu1.jpg > cthulhu1-100.txt
+  529  jp2a --invert --chars=1234567890 --height=200 cthulhu1.jpg > cthulhu1-200.txt
+  530  jp2a --invert --chars=1234567890 --height=400 cthulhu1.jpg > cthulhu1-400.txt
+  531  jp2a --invert --chars=1234567890 --height=800 cthulhu1.jpg > cthulhu1-800.txt
+  536  jp2a --invert --chars=1237456980 --height=100 cthulhu1.jpg > cthulhu1-100-density.txt
+  539  jp2a --invert --chars=1237456980 --height=200 cthulhu1.jpg > cthulhu1-200-density.txt
+  542  jp2a --invert --chars=1237456980 --height=50 cthulhu1.jpg > cthulhu1-50-density.txt

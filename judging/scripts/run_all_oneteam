@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# parameters:
+# $1 = directory from which to get problems
+# $2 = directory in which to store results
+# $3 = time limit in seconds
+# $4 = team number to run
+# $5 = binary to run
+
+if [[ $# -ne 5 ]]; then
+  echo "usage: run_all_oneteam <problem-directory> <results-directory> <time-limit> <team-number> <binary>"
+  exit 1
+fi
+
+for j in $1/*; do
+  for i in builds/$4; do
+    TEAM=$(basename $i)
+    TEAMDIR=`pwd`/$i
+    echo "Team $TEAM";
+    SCORES=$(cd $(dirname "$2") && pwd -P)/$(basename "$2")/$TEAM
+    PROBLEM=$(basename $j);	
+    PROBLEMFILE=$(cd $(dirname "$j") && pwd -P)/$PROBLEM
+    echo "Problem $PROBLEM enqueued"
+    tsp -n -L $TEAM-$PROBLEM $5 $TEAMDIR $SCORES $PROBLEMFILE $3
+  done
+done
+
+echo "all problems enqueued, check tsp for details"
+

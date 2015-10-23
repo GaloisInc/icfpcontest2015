@@ -1,0 +1,9 @@
+#!/bin/bash
+
+for i in implementations/*; do
+  echo -n "$(basename $i): "
+  if [ $(find $i -name '*2015-08-08*' -o -name '*2015-08-07*' | wc -l) != 0 ];
+  then echo -n "light "; fi
+  if [ $(find $i -name '*2015-08-10*' | wc -l) != 0 ]; then echo -n normal; fi
+  echo
+done

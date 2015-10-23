@@ -1,0 +1,9 @@
+Description: (Description here.)
+Created: 2015-08-06 23:11:34.767972 UTC
+Depends: create-initial-tables
+Apply: |
+  ALTER TABLE solutions DROP CONSTRAINT solutions_problem_id_fkey;
+
+Revert: |
+  ALTER TABLE solutions ADD CONSTRAINT solutions_problem_id_fkey FOREIGN KEY
+    (problem_id) REFERENCES problems (id);

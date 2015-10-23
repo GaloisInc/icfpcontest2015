@@ -1,0 +1,30 @@
+#!/bin/bash
+TEAMDIR=$1
+SCORESDIR=$2
+PROBLEM=$3
+TIMELIMIT=$4
+
+mkdir -p $SCORESDIR
+cd $TEAMDIR
+PROBLEMNAME=$(basename $PROBLEM)
+timeout $(($TIMELIMIT + 20)) ./play_icfp2015 -f $PROBLEM -t $TIMELIMIT -m 1024 \
+      -p "ei!" \
+      -p "ia! ia!" \
+      -p "r'lyeh" \
+      -p "yuggoth" \
+      -p "tsathoggua" \
+      -p "yogsothoth" \
+      -p "necronomicon" \
+      -p "vigintillion" \
+      -p "cthulhu fhtagn!" \
+      -p "ph'nglui mglw'nafh cthulhu r'lyeh wgah'nagl fhtagn." \
+      -p "in his house at r'lyeh dead cthulhu waits dreaming." \
+      -p "the laundry" \
+      -p "planet 10" \
+      -p "yoyodyne" \
+      -p "monkeyboy" \
+      -p "john bigboote" \
+      -p "blue hades" \
+      -p "case nightmare green" \
+      > $SCORESDIR/$PROBLEMNAME 2> $SCORESDIR/$PROBLEMNAME.err 
+

@@ -1,0 +1,11 @@
+Cumulative Submissions:
+
+select extract(epoch from date_trunc('hour', created_at) - '2015-08-07 05:00:00-07') / 3600, sum(count(*)) over (order by date_trunc('hour', created_at)) from solutions group by date_trunc('hour', created_at) order by date_trunc('hour', created_at);
+
+Submissions Per Hour:
+
+select extract(epoch from date_trunc('hour', created_at) - '2015-08-07 05:00:00-07') / 3600, count(*) from solutions group by date_trunc('hour', created_at) order by date_trunc('hour', created_at);
+
+Cumulative Size of Submissions:
+
+select extract(epoch from date_trunc('hour', H) - '2015-08-07 05:00:00-07') / 3600 as hour, (select sum(pg_column_size(content_path)) as bytes from solutions where created_at <= H) from generate_series(timestamp '2015-08-07 05:00:00-07', timestamp '2015-08-10 06:00:00-07', interval '1 hour') H;

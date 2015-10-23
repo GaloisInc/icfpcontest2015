@@ -1,0 +1,16 @@
+DadaDodo, Copyright (c) 1997, 1998, 2003 Jamie Zawinski <jwz@jwz.org>
+
+Run "dadadodo -help" for options.
+
+See "http://www.jwz.org/dadadodo/" for enlightenment.
+
+Changelog:
+
+   1.00   11-Jul-1997   Initial release.
+   1.01   14-Jul-1997   Better mailbox parsing.  Better output paragraph
+                        wrapping.  Binary .dodo file portability fixes.
+   1.02   04-Dec-1997   Better HTML output.  Better handling of 
+                        quoted-unreadable input.
+   1.03   21-Feb-1998   Strip signature files, VCards, and citation headings
+                        from messages.  Binary .dodo file portability fixes.
+   1.04:  09-Feb-2003   Fixed some crashes by using "unsigned char" everywhere.

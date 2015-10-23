@@ -1,0 +1,12 @@
+[ignore]
+.*/flow-bin/.*
+.*/es6-promise/.*
+.*/webpack/.*
+static/.*
+
+[include]
+
+[libs]
+./node_modules/sunshine/lib/
+
+[options]

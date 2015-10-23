@@ -1,0 +1,31 @@
+#!/bin/bash
+
+for file in implementations/*/*/*; do
+#  echo tar xvf \"$file\" -C \"$(dirname "$file")\"
+  DIR=$(dirname "$file")/extracted
+  mkdir "$DIR"
+  echo $file
+  case ${file: -2} in
+    ar) echo it is tar
+        tar xvf "$file" -C "$DIR"  || echo ERROR
+    ;;
+    z2) echo it is bz2
+        tar xvf "$file" -C "$DIR"  || echo ERROR
+    ;;
+    gz) echo it is gz
+        tar xvf "$file" -C "$DIR"  || echo ERROR
+    ;;
+    ip) echo it is zip
+        unzip "$file" -d "$DIR"  || echo ERROR
+    ;;
+    7z) echo it is 7z
+        7zr x -o "$DIR" "$file" || echo ERROR
+    ;;
+    bz) echo it is tbz? 
+        tar xvf "$file" -C "$DIR"  || echo ERROR
+    ;;
+    *) echo I dont know: $file
+    ;;
+  esac
+done
+
